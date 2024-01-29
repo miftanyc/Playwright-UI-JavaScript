@@ -1,5 +1,6 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
+import { testPlanFilter } from "allure-playwright/dist/testplan";
 
 /**
  * Read environment variables from file.
@@ -23,7 +24,8 @@ module.exports = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  grep: testPlanFilter(),
+  reporter: [["html"], ["allure-playwright"]],
   //reporter: [["html"], ["allure-playwright"]],
   //reporter: "dot",
   //reporter: "line",
