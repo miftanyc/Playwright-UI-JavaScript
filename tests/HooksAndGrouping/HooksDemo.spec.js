@@ -1,8 +1,13 @@
 import {test, expect} from '@playwright/test';
 
-let page;
+    /* Hooks Used For-
+            beforeAll()
+            afterAll()
+            beforeEach()
+            afterEach()
+     */
 
-//can also use beforeAll(), and afterAll()
+let page;
 
 test.beforeEach(async ({browser}) =>{
     page = await browser.newPage();
@@ -20,6 +25,7 @@ test.beforeEach(async ({browser}) =>{
     console.log("Before Each runs")
     
 })
+
 
 
 test.afterEach(async () => {
@@ -48,6 +54,7 @@ test('This test will check out first product', async () => {
     await page.locator("//a[@class='btn btn-primary']").click();
 
     console.log("Second Test Runs")
+
 
     await page.waitForTimeout(5000);
 });

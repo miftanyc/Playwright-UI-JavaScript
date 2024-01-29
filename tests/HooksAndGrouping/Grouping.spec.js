@@ -1,7 +1,7 @@
 import {test, expect} from '@playwright/test';
 
-
-test.describe.only('Group 1', async () => {//only or skip can be used to manage groups run
+//Grouping of Tests.
+test.describe.skip('Group 1', async () => {//only or skip can be used to manage groups run
 
     test('Test 1', async () => {
         console.log("Test 1 runs")

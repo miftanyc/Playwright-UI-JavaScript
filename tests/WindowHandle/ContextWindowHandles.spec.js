@@ -1,6 +1,6 @@
 import {test, expect} from "@playwright/test";
 
-test("This Test will handle Multiple Window created from same Context", async ({browser}) => {
+test.skip("This Test will handle Multiple Window created from same Context", async ({browser}) => {
 
     const ctx = await browser.newContext();
     const page1 = await ctx.newPage();
@@ -11,13 +11,13 @@ test("This Test will handle Multiple Window created from same Context", async ({
     await page2.goto("https://testautomationpractice.blogspot.com/");
     await expect (page2).toHaveTitle('Automation Testing Practice')
 
-    const pages = await ctx.pages();
+    const pages = ctx.pages();
     await console.log("number of page opened:", pages.length)
 
 });
 
 
-test.only('This Test will open page from same context and handle it', async ({page}) => {
+test.skip('This Test will open page from same context and handle it', async ({page}) => {
     await page.goto('https://testautomationpractice.blogspot.com/');
     await expect(page).toHaveTitle('Automation Testing Practice');
 
@@ -29,7 +29,7 @@ test.only('This Test will open page from same context and handle it', async ({pa
 
     ]);
 
-    await homeTab.l
+
 
 });
 

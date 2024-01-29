@@ -15,7 +15,7 @@ test('Assertion Implementation', async ({page}) => {
             toHaveText()        -- Complete Match with InnerText
             toContainText()     -- Partial Match with InnerText
             toHaveValue()       -- check input box typed value
-            toHaveAttribute()
+            toHaveAttribute('attributename', 'attributevalue')
     */
     await page.goto('https://letcode.in/edit');
 

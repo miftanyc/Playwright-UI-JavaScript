@@ -1,10 +1,10 @@
 import {test, expect } from "@playwright/test";
 
-import { HomePage } from '../pages/HomePage';
-import { LoginPage } from '../pages/LoginPage';
-import {AccountPage} from '../pages/AccountPage';
-import {CheckoutPage} from "../pages/CheckoutPage";
-import {ProductPage} from "../pages/ProductPage";
+import { HomePage } from '../../pages/HomePage';
+import { LoginPage } from '../../pages/LoginPage';
+import {AccountPage} from '../../pages/AccountPage';
+import {CheckoutPage} from "../../pages/CheckoutPage";
+import {ProductPage} from "../../pages/ProductPage";
 
 
 test('Demonstration of POM Intregration', async ({page}) => {

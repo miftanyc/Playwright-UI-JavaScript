@@ -26,7 +26,6 @@ test('Total Number of Frame', async ({page}) => {
 test('Frame Handling 1', async ({page}) => {
     await page.goto('https://ui.vision/demo/webtest/frames/');
     const yellowFrame = page.frame({url: 'https://ui.vision/demo/webtest/frames/frame_1.html'});
-    
     await yellowFrame.locator('input[name=mytext1]').fill("Testing in Yellow Frame");
 
     await page.waitForTimeout(3000);
