@@ -20,12 +20,13 @@ module.exports = defineConfig({
   //retries: 1,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
-  //workers:1,
+  workers:1,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  //workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   grep: testPlanFilter(),
-  reporter: [["html"], ["allure-playwright"]],
+  reporter: "allure-playwright",
+  //reporter: [["line"], ["allure-playwright"]],
   //reporter: [["html"], ["allure-playwright"]],
   //reporter: "dot",
   //reporter: "line",
@@ -42,9 +43,9 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     headless:false,
-    trace: 'on-first-retry',
+    //trace: 'on-first-retry',
     screenshot: "only-on-failure",
-    video: "retain-on-failure",
+    //video: "retain-on-failure",
   },
 
   //Set Timeout For Test default is 30000 mili second set

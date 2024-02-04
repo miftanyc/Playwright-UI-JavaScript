@@ -2,7 +2,7 @@ import {test, expect} from "@playwright/test";
 import {clearTimeout} from "node:timers";
 
 
-test.only('This will handle One Popup Window', async ({page}) => {
+test('This will handle One Popup Window', async ({page}) => {
 
     await page.goto("https://letcode.in/windows");
     await expect(page).toHaveTitle('Window handling - LetCode')
