@@ -15,6 +15,6 @@ export class AccountPage {
     async navigateBacktoHomePage() {
 
         await this.page.locator(this.retrunHomePageBtn).click();
-    
+
     }
 }
