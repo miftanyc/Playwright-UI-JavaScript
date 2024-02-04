@@ -25,9 +25,9 @@ module.exports = defineConfig({
   //workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   grep: testPlanFilter(),
-  reporter: "allure-playwright",
+  //reporter: "allure-playwright",
   //reporter: [["line"], ["allure-playwright"]],
-  //reporter: [["html"], ["allure-playwright"]],
+  reporter: [["html"], ["allure-playwright"]],
   //reporter: "dot",
   //reporter: "line",
   //reporter: "list",
